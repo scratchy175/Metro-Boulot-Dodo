@@ -35,13 +35,13 @@ def fill_matrice(matrice,liens):
         matrice[sommet_depart][sommet_arrive] = 1
         matrice[sommet_arrive][sommet_depart] = 1
 
+
 #Affichage de la matrice  (utile pour matrice petite sinon illisible)
 def affiche_matrice(matrice):
     for liste in matrice:
         print(" ".join([str(nombre) for nombre in liste]))
 
 #Vérification si la matrice est connexe
-
 def est_connexe(matrice):
     """Pars du sommet 0 et lance un parcours en prof pour donner l'ensemble des
     sommets connctés à 0 dans la liste composante_connexe_global"""
