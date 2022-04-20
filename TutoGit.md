@@ -4,7 +4,7 @@ https://git-scm.com/
 Ene fois installé il faut se login a son compte.
 
 Après il faut cloner le repertoire du projet sur son pc 
-Pour cela cliquer sur F1 dans VSCode taper "cloner" et cliquer sur "Git : Cloner" et choisir un emplacement sur son ordinateur ou cloner le repertoire.
+Pour cela cliquer sur F1 dans VSCode taper "cloner" et cliquer sur "Git : Cloner", taper "scratchy175/Metro-Boulot-Dodo", appuyer sur entrée et choisir un emplacement sur son ordinateur
 Ou alors si VSCode affiche l'onglet "Prise en main" cliquer sur "Cloner un depot Git"
 Ou alors dans l'onglet "Explorateur" a gauche
 
