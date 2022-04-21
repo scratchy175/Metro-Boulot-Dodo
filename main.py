@@ -9,13 +9,16 @@ def lecture_fichier(file):
 
 def file_parser(file, arg):
     lecture = lecture_fichier(file)
-    stations = {}
+    stations = []
     liens = []
     for ligne in lecture:
         premiere_lettre = ligne[0]
         if premiere_lettre == 'V':
-            info_station = ligne.split(" ",5)
-            print(info_station)
+            ligne_metro = ligne[7:9]
+            if ligne_metro == '13' or ligne_metro == '07':
+                stations.append(ligne.split(" ",6))
+            else:
+                stations.append(ligne.split(" ",5))
         elif premiere_lettre == 'E':
             liens.append(ligne.split(" "))
     if arg == "stations":
@@ -78,52 +81,6 @@ def destinations_possibles(sommet_depart):
 
 
 
-###############################################################################
-# Il est temps de faire un peu de djiskra
-###############################################################################
-
-# Python program for Dijkstra's single
-# source shortest path algorithm. The program is
-# for adjacency matrix representation of the graph
-class PlusCourtChemin():
- 
-    def __init__(self, matrice, sommet_depart, sommet_arrive):
-        self.nb_sommet = len(matrice)
-        self.matrice = matrice
-        self.sommet_depart = sommet_depart
-        self.sommet_arrive = sommet_arrive
-        self.dijkstra(sommet_depart, sommet_arrive)
- 
-    def mini_temps(self, temps, sommet_traite):
-        """Cherche dans la liste temps l'indice du sommet
-        non traité qui corresponds au minimum de temps."""
-        min = 1e7
-        min_index = 0
-        for v in range(self.nb_sommet):
-            if temps[v] < min and sommet_traite[v] == False:
-                min = temps[v]
-                min_index = v
-        return min_index
- 
-    def dijkstra(self, sommet_depart, sommet_arrive):
-        """Principale djikra"""
-        temps = [1e7] * self.nb_sommet
-        temps[sommet_depart] = 0
-        sommet_traite = [False] * self.nb_sommet
-        for _ in range(self.nb_sommet):  # Sommet duquel je pars
-            index_mini_tps = self.mini_temps(temps, sommet_traite)
-            sommet_traite[index_mini_tps] = True
-            for v in range(self.nb_sommet):
-                tps_depart_arrive = self.matrice[index_mini_tps][v]
-                tps_minimum = temps[index_mini_tps]
-                tps_itineraire = tps_minimum + tps_depart_arrive
-                if (tps_depart_arrive > 0) and (sommet_traite[v] == False) and (temps[v] > tps_itineraire):
-                    temps[v] = tps_itineraire
- 
-# Driver program
- 
-# This code is contributed by Divyanshu Mehta
-
 #Main pour tester les fonctions
 if __name__ == "__main__":
     file = "metro.txt"
@@ -131,7 +88,7 @@ if __name__ == "__main__":
     E = file_parser(file,"liens")
     nb_sommet = len(V)
     matrice = generer_matrice(nb_sommet)
-    fill_matrice(matrice,E)
+    #fill_matrice(matrice,E)
     #est_connexe(matrice)
     #est_connexe(matrice)
     #g = PlusCourtChemin(matrice, 0, 3)
