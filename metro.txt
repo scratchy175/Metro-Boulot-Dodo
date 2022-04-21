@@ -1,382 +1,382 @@
 # stations et liens du métro parisien
-# format : V num sommet nom_sommet
+# format : V num sommet nom_sommet num_ligne num_T1 num_T2 
 #          E num_sommet1 num_sommet1 temps_en_secondes
-V 0000 Abbesses
-V 0001 Alexandre Dumas
-V 0002 Alma Marceau
-V 0003 Alésia
-V 0004 Anatole France
-V 0005 Anvers
-V 0006 Argentine
-V 0007 Arts et Métiers
-V 0008 Arts et Métiers
-V 0009 Assemblée Nationale
-V 0010 Aubervilliers-Pantin, Quatre Chemins
-V 0011 Avenue Émile Zola
-V 0012 Avron
-V 0013 Barbès Rochechouart
-V 0014 Barbès Rochechouart
-V 0015 Basilique de Saint-Denis
-V 0016 Bastille
-V 0017 Bastille
-V 0018 Bastille
-V 0019 Bel Air
-V 0020 Belleville
-V 0021 Belleville
-V 0022 Bercy
-V 0023 Bercy
-V 0024 Bibliothèque François Mitterand
-V 0025 Billancourt
-V 0026 Bir-Hakeim
-V 0027 Blanche
-V 0028 Bobigny, Pablo Picasso
-V 0029 Bobigny-Pantin, Raymond Queneau
-V 0030 Boissière
-V 0031 Bolivar
-V 0032 Bonne Nouvelle
-V 0033 Bonne Nouvelle
-V 0034 Botzaris
-V 0035 Boucicaut
-V 0036 Boulogne, Jean Jaurès
-V 0037 Boulogne, Pont de Saint-Cloud, Rond Point Rhin et Danube
-V 0038 Bourse
-V 0039 Brochant
-V 0040 Bréguet-Sabin
-V 0041 Buttes Chaumont
-V 0042 Buzenval
-V 0043 Bérault
-V 0044 Cadet
-V 0045 Cambronne
-V 0046 Campo-Formio
-V 0047 Cardinal Lemoine
-V 0048 Carrefour Pleyel
-V 0049 Censier Daubenton
-V 0050 Champs Élysées, Clémenceau
-V 0051 Champs Élysées, Clémenceau
-V 0052 Chardon Lagâche
-V 0053 Charenton-Écoles
-V 0054 Charles Michels
-V 0055 Charles de Gaulle, Étoile
-V 0056 Charles de Gaulle, Étoile
-V 0057 Charles de Gaulle, Étoile
-V 0058 Charonne
-V 0059 Chaussée d'Antin, La Fayette
-V 0060 Chaussée d'Antin, La Fayette
-V 0061 Chemin Vert
-V 0062 Chevaleret
-V 0063 Château Landon
-V 0064 Château Rouge
-V 0065 Château d'Eau
-V 0066 Château de Vincennes
-V 0067 Châtelet
-V 0068 Châtelet
-V 0069 Châtelet
-V 0070 Châtelet
-V 0071 Châtelet
-V 0072 Châtillon-Montrouge
-V 0073 Cité
-V 0074 Cluny, La Sorbonne
-V 0075 Colonel Fabien
-V 0076 Commerce
-V 0077 Concorde
-V 0078 Concorde
-V 0079 Concorde
-V 0080 Convention
-V 0081 Corentin Celton
-V 0082 Corentin-Cariou
-V 0083 Corvisart
-V 0084 Cour Saint-Émilion
-V 0085 Courcelles
-V 0086 Couronnes
-V 0087 Crimée
-V 0088 Croix de Chavaux
-V 0089 Créteil-Préfecture
-V 0090 Créteil-Université
-V 0091 Créteil-l'Echat, Hôpital Henri Mondor
-V 0092 Danube
-V 0093 Daumesnil
-V 0094 Daumesnil
-V 0095 Denfert Rochereau
-V 0096 Denfert Rochereau
-V 0097 Dugommier
-V 0098 Dupleix
-V 0099 Duroc
-V 0100 Duroc
-V 0101 Edgar Quinet
-V 0102 Esplanade de la Défense
-V 0103 Europe
-V 0104 Exelmans
-V 0105 Faidherbe-Chaligny
-V 0106 Falguière
-V 0107 Filles du Calvaire
-V 0108 Fort d'Aubervilliers
-V 0109 Franklin D. Roosevelt
-V 0110 Franklin D. Roosevelt
-V 0111 Félix Faure
-V 0112 Gabriel Péri, Asnières-Gennevilliers
-V 0113 Gaité
-V 0114 Galliéni
-V 0115 Gambetta
-V 0116 Gambetta
-V 0117 Gare d'Austerlitz
-V 0118 Gare d'Austerlitz
-V 0119 Gare de Lyon
-V 0120 Gare de Lyon
-V 0121 Gare de l'Est
-V 0122 Gare de l'Est
-V 0123 Gare de l'Est
-V 0124 Gare du Nord
-V 0125 Gare du Nord
-V 0126 Garibaldi
-V 0127 George V
-V 0128 Glacière
-V 0129 Goncourt
-V 0130 Grande Arche de la Défense
-V 0131 Guy Môquet
-V 0132 Havre Caumartin
-V 0133 Havre Caumartin
-V 0134 Hoche
-V 0135 Hôtel de Ville
-V 0136 Hôtel de Ville
-V 0137 Invalides
-V 0138 Invalides
-V 0139 Iéna
-V 0140 Jacques Bonsergent
-V 0141 Jasmin
-V 0142 Jaurès
-V 0143 Jaurès
-V 0144 Jaurès
-V 0145 Javel
-V 0146 Jourdain
-V 0147 Jules Joffrin
-V 0148 Jussieu
-V 0149 Jussieu
-V 0150 Kléber
-V 0151 La Chapelle
-V 0152 La Courneuve, 8 Mai 1945
-V 0153 La Fourche
-V 0154 La Motte Picquet, Grenelle
-V 0155 La Motte Picquet, Grenelle
-V 0156 La Motte Picquet, Grenelle
-V 0157 La Muette
-V 0158 La Tour-Maubourg
-V 0159 Lamarck Caulaincourt
-V 0160 Laumière
-V 0161 Le Kremlin-Bicêtre
-V 0162 Le Peletier
-V 0163 Ledru Rollin
-V 0164 Les Gobelins
-V 0165 Les Halles
-V 0166 Les Sablons
-V 0167 Liberté
-V 0168 Liège
-V 0169 Louis Blanc
-V 0170 Louis Blanc
-V 0171 Louise Michel
-V 0172 Lourmel
-V 0173 Louvre, Rivoli
-V 0174 Mabillon
-V 0175 Madeleine
-V 0176 Madeleine
-V 0177 Madeleine
-V 0178 Mairie d'Issy
-V 0179 Mairie d'Ivry
-V 0180 Mairie de Clichy
-V 0181 Mairie de Montreuil
-V 0182 Mairie de Saint-Ouen
-V 0183 Mairie des Lilas
-V 0184 Maison Blanche
-V 0185 Maisons-Alfort les Juilliottes
-V 0186 Maisons-Alfort, Stade
-V 0187 Malakoff-Plateau de Vanves
-V 0188 Malakoff-Rue Étienne Dolet
-V 0189 Malesherbes
-V 0190 Maraîchers
-V 0191 Marcadet Poissonniers
-V 0192 Marcadet Poissonniers
-V 0193 Marcel Sembat
-V 0194 Marx Dormoy
-V 0195 Maubert Mutualité
-V 0196 Michel Ange Auteuil
-V 0197 Michel Ange Auteuil
-V 0198 Michel Ange Molitor
-V 0199 Michel Ange Molitor
-V 0200 Michel Bizot
-V 0201 Mirabeau
-V 0202 Miromesnil
-V 0203 Miromesnil
-V 0204 Monceau
-V 0205 Montgallet
-V 0206 Montparnasse Bienvenue
-V 0207 Montparnasse Bienvenue
-V 0208 Montparnasse Bienvenue
-V 0209 Montparnasse Bienvenue
-V 0210 Mouton-Duvernet
-V 0211 Ménilmontant
-V 0212 Nation
-V 0213 Nation
-V 0214 Nation
-V 0215 Nation
-V 0216 Nationale
-V 0217 Notre Dame de Lorette
-V 0218 Notre-Dame-des-Champs
-V 0219 Oberkampf
-V 0220 Oberkampf
-V 0221 Odéon
-V 0222 Odéon
-V 0223 Opéra
-V 0224 Opéra
-V 0225 Opéra
-V 0226 Ourcq
-V 0227 Palais Royal, Musée du Louvre
-V 0228 Palais Royal, Musée du Louvre
-V 0229 Parmentier
-V 0230 Passy
-V 0231 Pasteur
-V 0232 Pasteur
-V 0233 Pelleport
-V 0234 Pernety
-V 0235 Philippe-Auguste
-V 0236 Picpus
-V 0237 Pierre Curie
-V 0238 Pigalle
-V 0239 Pigalle
-V 0240 Place Balard
-V 0241 Place Monge
-V 0242 Place d'Italie
-V 0243 Place d'Italie
-V 0244 Place d'Italie
-V 0245 Place de Clichy
-V 0246 Place de Clichy
-V 0247 Place des Fêtes
-V 0248 Place des Fêtes
-V 0249 Plaisance
-V 0250 Poissonnière
-V 0251 Pont de Levallois, Bécon
-V 0252 Pont de Neuilly
-V 0253 Pont de Sèvres
-V 0254 Pont-Marie
-V 0255 Pont-Neuf
-V 0256 Porte Dauphine
-V 0257 Porte Dorée
-V 0258 Porte Maillot
-V 0259 Porte d'Auteuil
-V 0260 Porte d'Italie
-V 0261 Porte d'Ivry
-V 0262 Porte d'Orléans
-V 0263 Porte de Bagnolet
-V 0264 Porte de Champerret
-V 0265 Porte de Charenton
-V 0266 Porte de Choisy
-V 0267 Porte de Clichy
-V 0268 Porte de Clignancourt
-V 0269 Porte de Montreuil
-V 0270 Porte de Pantin
-V 0271 Porte de Saint-Cloud
-V 0272 Porte de Saint-Ouen
-V 0273 Porte de Vanves
-V 0274 Porte de Versailles
-V 0275 Porte de Vincennes
-V 0276 Porte de la Chapelle
-V 0277 Porte de la Villette
-V 0278 Porte des Lilas
-V 0279 Porte des Lilas
-V 0280 Pré-Saint-Gervais
-V 0281 Pyramides
-V 0282 Pyramides
-V 0283 Pyrénées
-V 0284 Père Lachaise
-V 0285 Père Lachaise
-V 0286 Péreire
-V 0287 Quai de la Gare
-V 0288 Quai de la Rapée
-V 0289 Quatre Septembre
-V 0290 Rambuteau
-V 0291 Ranelagh
-V 0292 Raspail
-V 0293 Raspail
-V 0294 Rennes
-V 0295 Reuilly Diderot
-V 0296 Reuilly Diderot
-V 0297 Richard Lenoir
-V 0298 Richelieu Drouot
-V 0299 Richelieu Drouot
-V 0300 Riquet
-V 0301 Robespierre
-V 0302 Rome
-V 0303 Rue Montmartre, Grands Boulevards
-V 0304 Rue Montmartre, Grands Boulevards
-V 0305 Rue Saint-Maur
-V 0306 Rue de la Pompe
-V 0307 Rue des Boulets
-V 0308 Rue du Bac
-V 0309 Réaumur Sébastopol
-V 0310 Réaumur Sébastopol
-V 0311 République
-V 0312 République
-V 0313 République
-V 0314 République
-V 0315 République
-V 0316 Saint-Ambroise
-V 0317 Saint-Augustin
-V 0318 Saint-Denis-Porte de Paris
-V 0319 Saint-Denis-Université
-V 0320 Saint-Fargeau
-V 0321 Saint-Francois Xavier
-V 0322 Saint-Georges
-V 0323 Saint-Germain-des-Prés
-V 0324 Saint-Jacques
-V 0325 Saint-Lazare
-V 0326 Saint-Lazare
-V 0327 Saint-Lazare
-V 0328 Saint-Mandé, Tourelle
-V 0329 Saint-Marcel
-V 0330 Saint-Michel
-V 0331 Saint-Paul, Le Marais
-V 0332 Saint-Philippe du Roule
-V 0333 Saint-Placide
-V 0334 Saint-Sulpice
-V 0335 Saint-Sébastien-Froissart
-V 0336 Sentier
-V 0337 Simplon
-V 0338 Solférino
-V 0339 Stalingrad
-V 0340 Stalingrad
-V 0341 Stalingrad
-V 0342 Strasbourg Saint-Denis
-V 0343 Strasbourg Saint-Denis
-V 0344 Strasbourg Saint-Denis
-V 0345 Sully Morland
-V 0346 Sèvres Babylone
-V 0347 Sèvres Babylone
-V 0348 Sèvres Lecourbe
-V 0349 Ségur
-V 0350 Temple
-V 0351 Ternes
-V 0352 Tolbiac
-V 0353 Trinité d'Estienne d'Orves
-V 0354 Trocadéro
-V 0355 Trocadéro
-V 0356 Tuileries
-V 0357 Télégraphe
-V 0358 Vaneau
-V 0359 Varenne
-V 0360 Vaugirard
-V 0361 Vavin
-V 0362 Victor Hugo
-V 0363 Villejuif, Louis Aragon
-V 0364 Villejuif, Léo Lagrange
-V 0365 Villejuif, P. Vaillant Couturier
-V 0366 Villiers
-V 0367 Villiers
-V 0368 Volontaires
-V 0369 Voltaire
-V 0370 Wagram
-V 0371 École Militaire
-V 0372 École Vétérinaire de Maisons-Alfort
-V 0373 Église d'Auteuil
-V 0374 Église de Pantin
-V 0375 Étienne Marcel
+V 0000 12 276 178 Abbesses
+V 0001 02 256 213 Alexandre Dumas
+V 0002 09 253 181 Alma Marceau
+V 0003 04 268 262 Alésia
+V 0004 03 251 114 Anatole France
+V 0005 02 256 213 Anvers
+V 0006 01 130 66 Argentine
+V 0007 11 68 183 Arts et Métiers
+V 0008 03 251 114 Arts et Métiers
+V 0009 12 276 178 Assemblée Nationale
+V 0010 07 152 179 163 Aubervilliers-Pantin, Quatre Chemins
+V 0011 10 37 117 Avenue Émile Zola
+V 0012 02 256 213 Avron
+V 0013 02 256 213 Barbès Rochechouart
+V 0014 04 268 262 Barbès Rochechouart
+V 0015 13 72 319 Basilique de Saint-Denis
+V 0016 01 130 66 Bastille
+V 0017 05 28 242 Bastille
+V 0018 08 240 89 Bastille
+V 0019 06 57 214 Bel Air
+V 0020 11 68 183 Belleville
+V 0021 02 256 213 Belleville
+V 0022 14 176 24 Bercy
+V 0023 06 57 214 Bercy
+V 0024 14 176 24 Bibliothèque François Mitterand
+V 0025 09 253 181 Billancourt
+V 0026 06 57 214 Bir-Hakeim
+V 0027 02 256 213 Blanche
+V 0028 05 28 242 Bobigny, Pablo Picasso
+V 0029 05 28 242 Bobigny-Pantin, Raymond Queneau
+V 0030 06 57 214 Boissière
+V 0031 7b 170 280 Bolivar
+V 0032 08 240 89 Bonne Nouvelle
+V 0033 09 253 181 Bonne Nouvelle
+V 0034 7b 170 280 Botzaris
+V 0035 08 240 89 Boucicaut
+V 0036 10 37 117 Boulogne, Jean Jaurès
+V 0037 10 37 117 Boulogne, Pont de Saint-Cloud, Rond Point Rhin et Danube
+V 0038 03 251 114 Bourse
+V 0039 13 72 112 Brochant
+V 0040 05 28 242 Bréguet-Sabin
+V 0041 7b 170 280 Buttes Chaumont
+V 0042 09 253 181 Buzenval
+V 0043 01 130 66 Bérault
+V 0044 07 152 179 163 Cadet
+V 0045 06 57 214 Cambronne
+V 0046 05 28 242 Campo-Formio
+V 0047 10 37 117 Cardinal Lemoine
+V 0048 13 72 319 Carrefour Pleyel
+V 0049 07 152 179 163 Censier Daubenton
+V 0050 01 130 66 Champs Élysées, Clémenceau
+V 0051 13 72 112 319 Champs Élysées, Clémenceau
+V 0052 10 221 Chardon Lagâche
+V 0053 08 240 89 Charenton-Écoles
+V 0054 10 37 117 Charles Michels
+V 0055 01 130 66 Charles de Gaulle, Étoile
+V 0056 02 256 213 Charles de Gaulle, Étoile
+V 0057 06 57 214 Charles de Gaulle, Étoile
+V 0058 09 253 181 Charonne
+V 0059 07 152 179 163 Chaussée d'Antin, La Fayette
+V 0060 09 253 181 Chaussée d'Antin, La Fayette
+V 0061 08 240 89 Chemin Vert
+V 0062 06 57 214 Chevaleret
+V 0063 07 152 179 163 Château Landon
+V 0064 04 268 262 Château Rouge
+V 0065 04 268 262 Château d'Eau
+V 0066 01 130 66 Château de Vincennes
+V 0067 01 130 66 Châtelet
+V 0068 11 68 183 Châtelet
+V 0069 14 176 24 Châtelet
+V 0070 04 268 262 Châtelet
+V 0071 07 152 179 163 Châtelet
+V 0072 13 72 112 319 Châtillon-Montrouge
+V 0073 04 268 262 Cité
+V 0074 10 37 117 Cluny, La Sorbonne
+V 0075 02 256 213 Colonel Fabien
+V 0076 08 240 89 Commerce
+V 0077 01 130 66 Concorde
+V 0078 12 276 178 Concorde
+V 0079 08 240 89 Concorde
+V 0080 12 276 178 Convention
+V 0081 12 276 178 Corentin Celton
+V 0082 07 152 179 163 Corentin-Cariou
+V 0083 06 57 214 Corvisart
+V 0084 14 176 24 Cour Saint-Émilion
+V 0085 02 256 213 Courcelles
+V 0086 02 256 213 Couronnes
+V 0087 07 152 179 163 Crimée
+V 0088 09 253 181 Croix de Chavaux
+V 0089 08 240 89 Créteil-Préfecture
+V 0090 08 240 89 Créteil-Université
+V 0091 08 240 89 Créteil-l'Echat, Hôpital Henri Mondor
+V 0092 7b 170 Danube
+V 0093 06 57 214 Daumesnil
+V 0094 08 240 89 Daumesnil
+V 0095 04 268 262 Denfert Rochereau
+V 0096 06 57 214 Denfert Rochereau
+V 0097 06 57 214 Dugommier
+V 0098 06 57 214 Dupleix
+V 0099 10 37 117 Duroc
+V 0100 13 72 112 319 Duroc
+V 0101 06 57 214 Edgar Quinet
+V 0102 01 130 66 Esplanade de la Défense
+V 0103 03 251 114 Europe
+V 0104 09 253 181 Exelmans
+V 0105 08 240 89 Faidherbe-Chaligny
+V 0106 12 276 178 Falguière
+V 0107 08 240 89 Filles du Calvaire
+V 0108 07 152 179 163 Fort d'Aubervilliers
+V 0109 01 130 66 Franklin D. Roosevelt
+V 0110 09 253 181 Franklin D. Roosevelt
+V 0111 08 240 89 Félix Faure
+V 0112 13 72 112 Gabriel Péri, Asnières-Gennevilliers
+V 0113 13 72 112 319 Gaité
+V 0114 03 251 114 Galliéni
+V 0115 03 251 114 Gambetta
+V 0116 3b 279 116 Gambetta
+V 0117 10 37 117 Gare d'Austerlitz
+V 0118 05 28 242 Gare d'Austerlitz
+V 0119 01 130 66 Gare de Lyon
+V 0120 14 176 24 Gare de Lyon
+V 0121 04 268 262 Gare de l'Est
+V 0122 05 28 242 Gare de l'Est
+V 0123 07 152 179 163 Gare de l'Est
+V 0124 04 268 262 Gare du Nord
+V 0125 05 28 242 Gare du Nord
+V 0126 13 72 319 Garibaldi
+V 0127 01 130 66 George V
+V 0128 06 57 214 Glacière
+V 0129 11 68 183 Goncourt
+V 0130 01 130 66 Grande Arche de la Défense
+V 0131 13 72 319 Guy Môquet
+V 0132 03 251 114 Havre Caumartin
+V 0133 09 253 181 Havre Caumartin
+V 0134 05 28 242 Hoche
+V 0135 01 130 66 Hôtel de Ville
+V 0136 11 68 183 Hôtel de Ville
+V 0137 13 72 112 319 Invalides
+V 0138 08 240 89 Invalides
+V 0139 09 253 181 Iéna
+V 0140 05 28 242 Jacques Bonsergent
+V 0141 09 253 181 Jasmin
+V 0142 02 256 213 Jaurès
+V 0143 05 28 242 Jaurès
+V 0144 7b 170 280 Jaurès
+V 0145 10 37 117 Javel
+V 0146 11 68 183 Jourdain
+V 0147 12 276 178 Jules Joffrin
+V 0148 10 37 117 Jussieu
+V 0149 07 152 179 163 Jussieu
+V 0150 06 57 214 Kléber
+V 0151 02 256 213 La Chapelle
+V 0152 07 152 179 163 La Courneuve, 8 Mai 1945
+V 0153 13 72 112 319 La Fourche
+V 0154 10 37 117 La Motte Picquet, Grenelle
+V 0155 06 57 214 La Motte Picquet, Grenelle
+V 0156 08 240 89 La Motte Picquet, Grenelle
+V 0157 09 253 181 La Muette
+V 0158 08 240 89 La Tour-Maubourg
+V 0159 12 276 178 Lamarck Caulaincourt
+V 0160 05 28 242 Laumière
+V 0161 07 152 363 Le Kremlin-Bicêtre
+V 0162 07 152 179 163 Le Peletier
+V 0163 08 240 89 Ledru Rollin
+V 0164 07 152 179 163 Les Gobelins
+V 0165 04 268 262 Les Halles
+V 0166 01 130 66 Les Sablons
+V 0167 08 240 89 Liberté
+V 0168 13 72 112 319 Liège
+V 0169 07 152 179 163 Louis Blanc
+V 0170 7b 170 280 Louis Blanc
+V 0171 03 251 114 Louise Michel
+V 0172 08 240 89 Lourmel
+V 0173 01 130 66 Louvre, Rivoli
+V 0174 10 37 117 Mabillon
+V 0175 12 276 178 Madeleine
+V 0176 14 176 24 Madeleine
+V 0177 08 240 89 Madeleine
+V 0178 12 276 178 Mairie d'Issy
+V 0179 07 152 179 Mairie d'Ivry
+V 0180 13 72 112 Mairie de Clichy
+V 0181 09 253 181 Mairie de Montreuil
+V 0182 13 72 319 Mairie de Saint-Ouen
+V 0183 11 68 183 Mairie des Lilas
+V 0184 07 152 179 163 Maison Blanche
+V 0185 08 240 89 Maisons-Alfort les Juilliottes
+V 0186 08 240 89 Maisons-Alfort, Stade
+V 0187 13 72 112 319 Malakoff-Plateau de Vanves
+V 0188 13 72 112 319 Malakoff-Rue Étienne Dolet
+V 0189 03 251 114 Malesherbes
+V 0190 09 253 181 Maraîchers
+V 0191 12 276 178 Marcadet Poissonniers
+V 0192 04 268 262 Marcadet Poissonniers
+V 0193 09 253 181 Marcel Sembat
+V 0194 12 276 178 Marx Dormoy
+V 0195 10 37 117 Maubert Mutualité
+V 0196 10 37 Michel Ange Auteuil
+V 0197 09 253 181 Michel Ange Auteuil
+V 0198 10 221 Michel Ange Molitor
+V 0199 09 253 181 Michel Ange Molitor
+V 0200 08 240 89 Michel Bizot
+V 0201 10 221 Mirabeau
+V 0202 13 72 112 319 Miromesnil
+V 0203 09 253 181 Miromesnil
+V 0204 02 256 213 Monceau
+V 0205 08 240 89 Montgallet
+V 0206 12 276 178 Montparnasse Bienvenue
+V 0207 13 72 112 319 Montparnasse Bienvenue
+V 0208 04 268 262 Montparnasse Bienvenue
+V 0209 06 57 214 Montparnasse Bienvenue
+V 0210 04 268 262 Mouton-Duvernet
+V 0211 02 256 213 Ménilmontant
+V 0212 01 130 66 Nation
+V 0213 02 256 213 Nation
+V 0214 06 57 214 Nation
+V 0215 09 253 181 Nation
+V 0216 06 57 214 Nationale
+V 0217 12 276 178 Notre Dame de Lorette
+V 0218 12 276 178 Notre-Dame-des-Champs
+V 0219 05 28 242 Oberkampf
+V 0220 09 253 181 Oberkampf
+V 0221 10 37 117 Odéon
+V 0222 04 268 262 Odéon
+V 0223 03 251 114 Opéra
+V 0224 07 152 179 163 Opéra
+V 0225 08 240 89 Opéra
+V 0226 05 28 242 Ourcq
+V 0227 01 130 66 Palais Royal, Musée du Louvre
+V 0228 07 152 179 163 Palais Royal, Musée du Louvre
+V 0229 03 251 114 Parmentier
+V 0230 06 57 214 Passy
+V 0231 12 276 178 Pasteur
+V 0232 06 57 214 Pasteur
+V 0233 3b 279 116 Pelleport
+V 0234 13 72 112 319 Pernety
+V 0235 02 256 213 Philippe-Auguste
+V 0236 06 57 214 Picpus
+V 0237 07 152 179 Pierre Curie
+V 0238 12 276 178 Pigalle
+V 0239 02 256 213 Pigalle
+V 0240 08 240 89 Place Balard
+V 0241 07 152 179 163 Place Monge
+V 0242 05 28 242 Place d'Italie
+V 0243 06 57 214 Place d'Italie
+V 0244 07 152 179 163 Place d'Italie
+V 0245 13 72 112 319 Place de Clichy
+V 0246 02 256 213 Place de Clichy
+V 0247 11 68 183 Place des Fêtes
+V 0248 7b 280 Place des Fêtes
+V 0249 13 72 112 319 Plaisance
+V 0250 07 152 179 163 Poissonnière
+V 0251 03 251 114 Pont de Levallois, Bécon
+V 0252 01 130 66 Pont de Neuilly
+V 0253 09 253 181 Pont de Sèvres
+V 0254 07 152 179 163 Pont-Marie
+V 0255 07 152 179 163 Pont-Neuf
+V 0256 02 256 213 Porte Dauphine
+V 0257 08 240 89 Porte Dorée
+V 0258 01 130 66 Porte Maillot
+V 0259 10 37 Porte d'Auteuil
+V 0260 07 152 179 Porte d'Italie
+V 0261 07 152 179 Porte d'Ivry
+V 0262 04 268 262 Porte d'Orléans
+V 0263 03 251 114 Porte de Bagnolet
+V 0264 03 251 114 Porte de Champerret
+V 0265 08 240 89 Porte de Charenton
+V 0266 07 152 179 Porte de Choisy
+V 0267 13 72 112 Porte de Clichy
+V 0268 04 268 262 Porte de Clignancourt
+V 0269 09 253 181 Porte de Montreuil
+V 0270 05 28 242 Porte de Pantin
+V 0271 09 253 181 Porte de Saint-Cloud
+V 0272 13 72 319 Porte de Saint-Ouen
+V 0273 13 72 112 319 Porte de Vanves
+V 0274 12 276 178 Porte de Versailles
+V 0275 01 130 66 Porte de Vincennes
+V 0276 12 276 178 Porte de la Chapelle
+V 0277 07 152 179 163 Porte de la Villette
+V 0278 11 68 183 Porte des Lilas
+V 0279 3b 279 116 Porte des Lilas
+V 0280 7b 170 280 Pré-Saint-Gervais
+V 0281 14 176 24 Pyramides
+V 0282 07 152 179 163 Pyramides
+V 0283 11 68 183 Pyrénées
+V 0284 02 256 213 Père Lachaise
+V 0285 03 251 114 Père Lachaise
+V 0286 03 251 114 Péreire
+V 0287 06 57 214 Quai de la Gare
+V 0288 05 28 242 Quai de la Rapée
+V 0289 03 251 114 Quatre Septembre
+V 0290 11 68 183 Rambuteau
+V 0291 09 253 181 Ranelagh
+V 0292 04 268 262 Raspail
+V 0293 06 57 214 Raspail
+V 0294 12 276 178 Rennes
+V 0295 01 130 66 Reuilly Diderot
+V 0296 08 240 89 Reuilly Diderot
+V 0297 05 28 242 Richard Lenoir
+V 0298 08 240 89 Richelieu Drouot
+V 0299 09 253 181 Richelieu Drouot
+V 0300 07 152 179 163 Riquet
+V 0301 09 253 181 Robespierre
+V 0302 02 256 213 Rome
+V 0303 08 240 89 Rue Montmartre, Grands Boulevards
+V 0304 09 253 181 Rue Montmartre, Grands Boulevards
+V 0305 03 251 114 Rue Saint-Maur
+V 0306 09 253 181 Rue de la Pompe
+V 0307 09 253 181 Rue des Boulets
+V 0308 12 276 178 Rue du Bac
+V 0309 03 251 114 Réaumur Sébastopol
+V 0310 04 268 262 Réaumur Sébastopol
+V 0311 11 68 183 République
+V 0312 03 251 114 République
+V 0313 05 28 242 République
+V 0314 08 240 89 République
+V 0315 09 253 181 République
+V 0316 09 253 181 Saint-Ambroise
+V 0317 09 253 181 Saint-Augustin
+V 0318 13 72 319 Saint-Denis-Porte de Paris
+V 0319 13 72 319 Saint-Denis-Université
+V 0320 3b 279 116 Saint-Fargeau
+V 0321 13 72 112 319 Saint-Francois Xavier
+V 0322 12 276 178 Saint-Georges
+V 0323 04 268 262 Saint-Germain-des-Prés
+V 0324 06 57 214 Saint-Jacques
+V 0325 12 276 178 Saint-Lazare
+V 0326 13 72 112 319 Saint-Lazare
+V 0327 03 251 114 Saint-Lazare
+V 0328 01 130 66 Saint-Mandé, Tourelle
+V 0329 05 28 242 Saint-Marcel
+V 0330 04 268 262 Saint-Michel
+V 0331 01 130 66 Saint-Paul, Le Marais
+V 0332 09 253 181 Saint-Philippe du Roule
+V 0333 04 268 262 Saint-Placide
+V 0334 04 268 262 Saint-Sulpice
+V 0335 08 240 89 Saint-Sébastien-Froissart
+V 0336 03 251 114 Sentier
+V 0337 04 268 262 Simplon
+V 0338 12 276 178 Solférino
+V 0339 02 256 213 Stalingrad
+V 0340 05 28 242 Stalingrad
+V 0341 07 152 179 163 Stalingrad
+V 0342 04 268 262 Strasbourg Saint-Denis
+V 0343 08 240 89 Strasbourg Saint-Denis
+V 0344 09 253 181 Strasbourg Saint-Denis
+V 0345 07 152 179 163 Sully Morland
+V 0346 10 37 117 Sèvres Babylone
+V 0347 12 276 178 Sèvres Babylone
+V 0348 06 57 214 Sèvres Lecourbe
+V 0349 10 37 117 Ségur
+V 0350 03 251 114 Temple
+V 0351 02 256 213 Ternes
+V 0352 07 152 179 163 Tolbiac
+V 0353 12 276 178 Trinité d'Estienne d'Orves
+V 0354 06 57 214 Trocadéro
+V 0355 09 253 181 Trocadéro
+V 0356 01 130 66 Tuileries
+V 0357 11 68 183 Télégraphe
+V 0358 10 37 117 Vaneau
+V 0359 13 72 112 319 Varenne
+V 0360 12 276 178 Vaugirard
+V 0361 04 268 262 Vavin
+V 0362 02 256 213 Victor Hugo
+V 0363 07 152 363 Villejuif, Louis Aragon
+V 0364 07 152 363 Villejuif, Léo Lagrange
+V 0365 07 152 363 Villejuif, P. Vaillant Couturier
+V 0366 02 256 213 Villiers
+V 0367 03 251 114 Villiers
+V 0368 12 276 178 Volontaires
+V 0369 09 253 181 Voltaire
+V 0370 03 251 114 Wagram
+V 0371 08 240 89 École Militaire
+V 0372 08 240 89 École Vétérinaire de Maisons-Alfort
+V 0373 10 37 Église d'Auteuil
+V 0374 05 28 242 Église de Pantin
+V 0375 04 268 262 Étienne Marcel
 E 0 238 41
 E 0 159 46
 E 1 12 36

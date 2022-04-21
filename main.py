@@ -14,11 +14,8 @@ def file_parser(file, arg):
     for ligne in lecture:
         premiere_lettre = ligne[0]
         if premiere_lettre == 'V':
-            info_station = ligne.split(" ",3)
-            num = int(info_station[1])
-            num_ligne = info_station[2]
-            nom = info_station[3]
-            stations[num] = [nom, num_ligne]
+            info_station = ligne.split(" ",5)
+            print(info_station)
         elif premiere_lettre == 'E':
             liens.append(ligne.split(" "))
     if arg == "stations":
@@ -122,22 +119,6 @@ class PlusCourtChemin():
                 tps_itineraire = tps_minimum + tps_depart_arrive
                 if (tps_depart_arrive > 0) and (sommet_traite[v] == False) and (temps[v] > tps_itineraire):
                     temps[v] = tps_itineraire
-            print(temps)
-
-    
-    def itineraire(self, sommet_depart, sommet_voulue, tps_voulu, tps, sommet_traite, itineraire):
-        """Donne tous les itinéraires possibles à partir du sommet de depart"""
-        itineraire += str(sommet_depart) + "/"
-        depart = self.matrice[sommet_depart]
-        sommet_traite.append(sommet_depart)
-        les_destination = [j for j in range(len(depart)) if (depart[j] != 0)]
-        for destination in les_destination:
-            if (destination not in sommet_traite) and tps <= tps_voulu and sommet_depart != sommet_voulue:
-                tps += self.matrice[sommet_depart][destination]
-                self.itineraire(destination, sommet_voulue, tps_voulu, tps, sommet_traite, itineraire)
-            else:
-                if tps == tps_voulu and sommet_depart == sommet_voulue:
-                    print(itineraire, tps)
  
 # Driver program
  
@@ -145,13 +126,12 @@ class PlusCourtChemin():
 
 #Main pour tester les fonctions
 if __name__ == "__main__":
-    file = "test_fichier.txt"
+    file = "metro.txt"
     V = file_parser(file,"stations")
     E = file_parser(file,"liens")
     nb_sommet = len(V)
     matrice = generer_matrice(nb_sommet)
     fill_matrice(matrice,E)
     #est_connexe(matrice)
-
-    g = PlusCourtChemin(matrice, 0, 3)
-    #print(destinations_possibles(171))
+    #est_connexe(matrice)
+    #g = PlusCourtChemin(matrice, 0, 3)
