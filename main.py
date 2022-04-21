@@ -14,7 +14,11 @@ def file_parser(file, arg):
     for ligne in lecture:
         premiere_lettre = ligne[0]
         if premiere_lettre == 'V':
-            pass
+            info_station = ligne.split(" ",3)
+            num = int(info_station[1])
+            num_ligne = info_station[2]
+            nom = info_station[3]
+            stations[num] = [nom, num_ligne]
         elif premiere_lettre == 'E':
             liens.append(ligne.split(" "))
     if arg == "stations":
@@ -37,10 +41,9 @@ def fill_matrice(matrice,liens):
     for ligne in liens:
         sommet_depart = int(ligne[1])
         sommet_arrive = int(ligne[2])
-        temps = int(ligne[3])
+        temps = int(ligne[-1])
         matrice[sommet_depart][sommet_arrive] = temps
         matrice[sommet_arrive][sommet_depart] = temps
-
 
 #Affichage de la matrice  (utile pour matrice petite sinon illisible)
 def affiche_matrice(matrice):
@@ -48,6 +51,7 @@ def affiche_matrice(matrice):
         print(" ".join([str(nombre) for nombre in liste]))
 
 #Vérification si la matrice est connexe
+
 def est_connexe(matrice):
     """Pars du sommet 0 et lance un parcours en prof pour donner l'ensemble des
     sommets connectés à 0, et affirme ou réfute la connexité du graphe"""
@@ -118,7 +122,8 @@ class PlusCourtChemin():
                 tps_itineraire = tps_minimum + tps_depart_arrive
                 if (tps_depart_arrive > 0) and (sommet_traite[v] == False) and (temps[v] > tps_itineraire):
                     temps[v] = tps_itineraire
- 
+        print("Pour aller de {} à {} il faut {} sec".format(sommet_depart, sommet_arrive, temps[sommet_arrive]))
+
 # Driver program
  
 # This code is contributed by Divyanshu Mehta
@@ -131,7 +136,6 @@ if __name__ == "__main__":
     nb_sommet = len(V)
     matrice = generer_matrice(nb_sommet)
     fill_matrice(matrice,E)
-    affiche_matrice(matrice)
     #est_connexe(matrice)
-    #est_connexe(matrice)
-    g = PlusCourtChemin(matrice, 0, 3)
+    #print(destinations_possibles(171))
+    PlusCourtChemin(matrice, 0, 20)

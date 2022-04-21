@@ -38,7 +38,7 @@ V 0033 09 253 181 Bonne Nouvelle
 V 0034 7b 170 280 Botzaris
 V 0035 08 240 89 Boucicaut
 V 0036 10 37 117 Boulogne, Jean Jaurès
-V 0037 10 37 117 Boulogne, Pont de Saint-Cloud, Rond Point Rhin et Danube
+V 0037 10 37 117 Boulogne, Pont de Saint-Cloud,
 V 0038 03 251 114 Bourse
 V 0039 13 72 112 Brochant
 V 0040 05 28 242 Bréguet-Sabin
@@ -53,7 +53,7 @@ V 0048 13 72 319 Carrefour Pleyel
 V 0049 07 152 179 163 Censier Daubenton
 V 0050 01 130 66 Champs Élysées, Clémenceau
 V 0051 13 72 112 319 Champs Élysées, Clémenceau
-V 0052 10 221 Chardon Lagâche
+V 0052 10 37 117 Chardon Lagâche
 V 0053 08 240 89 Charenton-Écoles
 V 0054 10 37 117 Charles Michels
 V 0055 01 130 66 Charles de Gaulle, Étoile
@@ -93,7 +93,7 @@ V 0088 09 253 181 Croix de Chavaux
 V 0089 08 240 89 Créteil-Préfecture
 V 0090 08 240 89 Créteil-Université
 V 0091 08 240 89 Créteil-l'Echat, Hôpital Henri Mondor
-V 0092 7b 170 Danube
+V 0092 7b 170 280 Danube
 V 0093 06 57 214 Daumesnil
 V 0094 08 240 89 Daumesnil
 V 0095 04 268 262 Denfert Rochereau
@@ -197,12 +197,12 @@ V 0192 04 268 262 Marcadet Poissonniers
 V 0193 09 253 181 Marcel Sembat
 V 0194 12 276 178 Marx Dormoy
 V 0195 10 37 117 Maubert Mutualité
-V 0196 10 37 Michel Ange Auteuil
+V 0196 10 37 117 Michel Ange Auteuil
 V 0197 09 253 181 Michel Ange Auteuil
-V 0198 10 221 Michel Ange Molitor
+V 0198 10 37 117 Michel Ange Molitor
 V 0199 09 253 181 Michel Ange Molitor
 V 0200 08 240 89 Michel Bizot
-V 0201 10 221 Mirabeau
+V 0201 10 37 117 Mirabeau
 V 0202 13 72 112 319 Miromesnil
 V 0203 09 253 181 Miromesnil
 V 0204 02 256 213 Monceau
@@ -249,7 +249,7 @@ V 0244 07 152 179 163 Place d'Italie
 V 0245 13 72 112 319 Place de Clichy
 V 0246 02 256 213 Place de Clichy
 V 0247 11 68 183 Place des Fêtes
-V 0248 7b 280 Place des Fêtes
+V 0248 7b 170 280 Place des Fêtes
 V 0249 13 72 112 319 Plaisance
 V 0250 07 152 179 163 Poissonnière
 V 0251 03 251 114 Pont de Levallois, Bécon
@@ -260,7 +260,7 @@ V 0255 07 152 179 163 Pont-Neuf
 V 0256 02 256 213 Porte Dauphine
 V 0257 08 240 89 Porte Dorée
 V 0258 01 130 66 Porte Maillot
-V 0259 10 37 Porte d'Auteuil
+V 0259 10 37 117 Porte d'Auteuil
 V 0260 07 152 179 Porte d'Italie
 V 0261 07 152 179 Porte d'Ivry
 V 0262 04 268 262 Porte d'Orléans
@@ -374,7 +374,7 @@ V 0369 09 253 181 Voltaire
 V 0370 03 251 114 Wagram
 V 0371 08 240 89 École Militaire
 V 0372 08 240 89 École Vétérinaire de Maisons-Alfort
-V 0373 10 37 Église d'Auteuil
+V 0373 10 37 117 Église d'Auteuil
 V 0374 05 28 242 Église de Pantin
 V 0375 04 268 262 Étienne Marcel
 E 0 238 41
