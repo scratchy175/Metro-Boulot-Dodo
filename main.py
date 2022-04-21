@@ -9,16 +9,16 @@ def lecture_fichier(file):
 
 def file_parser(file, arg):
     lecture = lecture_fichier(file)
-    stations = {}
+    stations = []
     liens = []
     for ligne in lecture:
         premiere_lettre = ligne[0]
         if premiere_lettre == 'V':
-            info_station = ligne.split(" ",3)
-            num = int(info_station[1])
-            num_ligne = info_station[2]
-            nom = info_station[3]
-            stations[num] = [nom, num_ligne]
+            ligne_metro = ligne[7:9]
+            if ligne_metro == '13' or ligne_metro == '07':
+                stations.append(ligne.split(" ",6))
+            else:
+                stations.append(ligne.split(" ",5))
         elif premiere_lettre == 'E':
             liens.append(ligne.split(" "))
     if arg == "stations":
