@@ -30,27 +30,36 @@ def file_parser(file, arg):
 #Vérification de la connexité
 ###############################################################################
 
-#Génèration une matrice de taille n*n
-
 def generer_matrice(n):
+    """Renvoie une matrice de taille n*n"""
     return [[0]*n for _ in range(n)]
 
 
-#Remplissage de la matrice
-def fill_matrice(matrice,liens):
+def fill_matrice(matrice, liens):
+    """Remplis la matrice à partir des relations entre deux
+    arrets, ces relations ne forment pas tous le temps des
+    aretes mais peuvent etre des arcs! (Ligne 10 et 7bis)."""
+    arc_ligne_7b = [34, 248, 280, 92]
+    arc_ligne_10 = [36, 198, 52, 201, 145, 373, 196, 259]
     for ligne in liens:
         sommet_depart = int(ligne[1])
         sommet_arrive = int(ligne[2])
-        temps = int(ligne[-1])
+        temps = int(ligne[3])
         matrice[sommet_depart][sommet_arrive] = temps
-        matrice[sommet_arrive][sommet_depart] = temps
+        if ((sommet_depart in arc_ligne_7b and sommet_arrive in arc_ligne_7b)
+            or (sommet_depart in arc_ligne_10 and sommet_arrive in arc_ligne_10)
+            ):
+            pass
+            #print(sommet_depart, sommet_arrive)
+        else:
+            matrice[sommet_arrive][sommet_depart] = temps
 
-#Affichage de la matrice  (utile pour matrice petite sinon illisible)
+
 def affiche_matrice(matrice):
+    """Affiche la matrice"""
     for liste in matrice:
         print(" ".join([str(nombre) for nombre in liste]))
 
-#Vérification si la matrice est connexe
 
 def est_connexe(matrice):
     """Pars du sommet 0 et lance un parcours en prof pour donner l'ensemble des
@@ -80,73 +89,62 @@ def destinations_possibles(sommet_depart):
     return [j for j in range(len(depart)) if (depart[j] != 0)]
 
 
-
 ###############################################################################
 # Il est temps de faire un peu de djiskra
 ###############################################################################
 
-# Python program for Dijkstra's single
-# source shortest path algorithm. The program is
-# for adjacency matrix representation of the graph
-class PlusCourtChemin():
- 
-    def __init__(self, matrice, sommet_depart, sommet_arrive):
-        self.nb_sommet = len(matrice)
-        self.matrice = matrice
-        self.sommet_depart = sommet_depart
-        self.sommet_arrive = sommet_arrive
-        self.dijkstra(sommet_depart, sommet_arrive)
- 
-    def mini_temps(self, temps, sommet_traite):
-        """Cherche dans la liste temps l'indice du sommet
-        non traité qui corresponds au minimum de temps."""
-        min = 1e7
-        min_index = 0
-        for v in range(self.nb_sommet):
-            if temps[v] < min and sommet_traite[v] == False:
-                min = temps[v]
-                min_index = v
-        return min_index
+def mini_temps( temps, sommet_traite):
+    """Cherche dans la liste temps l'indice du sommet
+    non traité qui corresponds au minimum de temps."""
+    min = 1e7
+    min_index = 0
+    for v in range(nb_sommet):
+        if temps[v] < min and sommet_traite[v] == False:
+            min = temps[v]
+            min_index = v
+    return min_index
 
-    def dijkstra(self, sommet_depart, sommet_arrive):
-        """Principale djikra"""
-        sommet_traite = [False] * self.nb_sommet
-        temps = [1e7] * self.nb_sommet
-        temps[sommet_depart] = 0
-        pere = {sommet_depart:None}  #Racine
-        for _ in range(self.nb_sommet):  # Sommet duquel je pars
-            index_mini_tps = self.mini_temps(temps, sommet_traite)
-            sommet_traite[index_mini_tps] = True
-            for v in range(self.nb_sommet):
-                tps_depart_arrive = self.matrice[index_mini_tps][v]
-                tps_minimum = temps[index_mini_tps]
-                tps_itineraire = tps_minimum + tps_depart_arrive
-                if (tps_depart_arrive > 0) and (sommet_traite[v] == False) and (temps[v] > tps_itineraire):
-                    temps[v] = tps_itineraire
-                    pere[v] = index_mini_tps
-        self.mes_itineraire(pere, sommet_depart, sommet_arrive)
 
-    def mes_itineraire(self, dico, sommet_depart, sommet_arrive):
-        """Pars de l'arrive pour remontrer progressivement au sommet de départ"""
-        itineraire = []
-        while dico[sommet_arrive] != None: # Racine
-            itineraire.append(sommet_arrive)
-            sommet_arrive = dico[sommet_arrive]
-        itineraire.append(sommet_depart)
-        print(itineraire[::-1]) # Je suis parti de l'arrivé donc forcément...
+def dijkstra(matrice, sommet_depart, sommet_arrive):
+    """Renvoie l'itinéraire le plus court entre le sommet de départ
+    et le somme d'arrive. """
+    sommet_traite = [False] * nb_sommet
+    temps = [1e7] * nb_sommet
+    temps[sommet_depart] = 0
+    pere = {sommet_depart:None}  #Racine
+    for _ in range(nb_sommet):  # Sommet duquel je pars
+        index_mini_tps = mini_temps(temps, sommet_traite)
+        sommet_traite[index_mini_tps] = True
+        for v in range(nb_sommet):
+            tps_depart_arrive = matrice[index_mini_tps][v]
+            tps_minimum = temps[index_mini_tps]
+            tps_itineraire = tps_minimum + tps_depart_arrive
+            if (tps_depart_arrive > 0) and (sommet_traite[v] == False) and (temps[v] > tps_itineraire):
+                temps[v] = tps_itineraire
+                pere[v] = index_mini_tps
+    plus_court_chemin = mes_itineraire(pere, sommet_depart, sommet_arrive)
+    temps_plus_court_chemin = temps[sommet_arrive]
+    return plus_court_chemin, temps_plus_court_chemin
 
-# Driver program
- 
-# This code is contributed by Divyanshu Mehta
+
+def mes_itineraire(dico, sommet_depart, sommet_arrive):
+    """Pars de l'arrive pour remontrer progressivement au sommet de départ"""
+    itineraire = []
+    while dico[sommet_arrive] != None: # Je m'arrete lorsque Racine
+        itineraire.append(sommet_arrive)
+        sommet_arrive = dico[sommet_arrive]
+    itineraire.append(sommet_depart)  # Je rajoute la racine
+    return itineraire[::-1] # Je suis parti de l'arrivé donc forcément...
+
 
 #Main pour tester les fonctions
 if __name__ == "__main__":
-    file = "test_fichier.txt"
+    file = "metro.txt"
     V = file_parser(file,"stations")
     E = file_parser(file,"liens")
     nb_sommet = len(V)
     matrice = generer_matrice(nb_sommet)
     fill_matrice(matrice,E)
     #est_connexe(matrice)
-    #print(destinations_possibles(171))
-    PlusCourtChemin(matrice, 0, 3)
+    #print(destinations_possibles(92))
+    print(dijkstra(matrice, 52, 198))
