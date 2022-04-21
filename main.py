@@ -9,16 +9,16 @@ def lecture_fichier(file):
 
 def file_parser(file, arg):
     lecture = lecture_fichier(file)
-    stations = {}
+    stations = []
     liens = []
     for ligne in lecture:
         premiere_lettre = ligne[0]
         if premiere_lettre == 'V':
-            info_station = ligne.split(" ",3)
-            num = int(info_station[1])
-            num_ligne = info_station[2]
-            nom = info_station[3]
-            stations[num] = [nom, num_ligne]
+            ligne_metro = ligne[7:9]
+            if ligne_metro == '13' or ligne_metro == '07':
+                stations.append(ligne.split(" ",6))
+            else:
+                stations.append(ligne.split(" ",5))
         elif premiere_lettre == 'E':
             liens.append(ligne.split(" "))
     if arg == "stations":
@@ -39,11 +39,12 @@ def generer_matrice(n):
 #Remplissage de la matrice
 def fill_matrice(matrice,liens):
     for ligne in liens:
-        sommet_depart = int(ligne[1])
+        sommet_depart = int(ligne[1]) 
         sommet_arrive = int(ligne[2])
         temps = int(ligne[-1])
         matrice[sommet_depart][sommet_arrive] = temps
         matrice[sommet_arrive][sommet_depart] = temps
+
 
 #Affichage de la matrice  (utile pour matrice petite sinon illisible)
 def affiche_matrice(matrice):
@@ -51,7 +52,6 @@ def affiche_matrice(matrice):
         print(" ".join([str(nombre) for nombre in liste]))
 
 #Vérification si la matrice est connexe
-
 def est_connexe(matrice):
     """Pars du sommet 0 et lance un parcours en prof pour donner l'ensemble des
     sommets connectés à 0, et affirme ou réfute la connexité du graphe"""
@@ -80,7 +80,6 @@ def destinations_possibles(sommet_depart):
     return [j for j in range(len(depart)) if (depart[j] != 0)]
 
 
-
 ###############################################################################
 # Il est temps de faire un peu de djiskra
 ###############################################################################
@@ -89,14 +88,14 @@ def destinations_possibles(sommet_depart):
 # source shortest path algorithm. The program is
 # for adjacency matrix representation of the graph
 class PlusCourtChemin():
- 
+
     def __init__(self, matrice, sommet_depart, sommet_arrive):
         self.nb_sommet = len(matrice)
         self.matrice = matrice
         self.sommet_depart = sommet_depart
         self.sommet_arrive = sommet_arrive
         self.dijkstra(sommet_depart, sommet_arrive)
- 
+
     def mini_temps(self, temps, sommet_traite):
         """Cherche dans la liste temps l'indice du sommet
         non traité qui corresponds au minimum de temps."""
@@ -107,7 +106,7 @@ class PlusCourtChemin():
                 min = temps[v]
                 min_index = v
         return min_index
- 
+
     def dijkstra(self, sommet_depart, sommet_arrive):
         """Principale djikra"""
         temps = [1e7] * self.nb_sommet
@@ -122,11 +121,28 @@ class PlusCourtChemin():
                 tps_itineraire = tps_minimum + tps_depart_arrive
                 if (tps_depart_arrive > 0) and (sommet_traite[v] == False) and (temps[v] > tps_itineraire):
                     temps[v] = tps_itineraire
-        print("Pour aller de {} à {} il faut {} sec".format(sommet_depart, sommet_arrive, temps[sommet_arrive]))
+        print(temps)
+
+
+    def itineraire(self, sommet_depart, sommet_voulue, tps_voulu, tps, sommet_traite, itineraire):
+        """Donne tous les itinéraires possibles à partir du sommet de depart"""
+        itineraire += str(sommet_depart) + "/"
+        depart = self.matrice[sommet_depart]
+        sommet_traite.append(sommet_depart)
+        les_destination = [j for j in range(len(depart)) if (depart[j] != 0)]
+        for destination in les_destination:
+            if (destination not in sommet_traite) and tps <= tps_voulu and sommet_depart != sommet_voulue:
+                tps += self.matrice[sommet_depart][destination]
+                self.itineraire(destination, sommet_voulue, tps_voulu, tps, sommet_traite, itineraire)
+            else:
+                if tps == tps_voulu and sommet_depart == sommet_voulue:
+                    print(itineraire, tps)
 
 # Driver program
- 
+
 # This code is contributed by Divyanshu Mehta
+
+
 
 #Main pour tester les fonctions
 if __name__ == "__main__":
@@ -135,7 +151,9 @@ if __name__ == "__main__":
     E = file_parser(file,"liens")
     nb_sommet = len(V)
     matrice = generer_matrice(nb_sommet)
-    fill_matrice(matrice,E)
+    #fill_matrice(matrice,E)
     #est_connexe(matrice)
-    #print(destinations_possibles(171))
-    PlusCourtChemin(matrice, 0, 20)
+    #est_connexe(matrice)
+    g = PlusCourtChemin(matrice, 0, 20)
+    #print(temps)
+    print(g)
