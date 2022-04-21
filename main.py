@@ -107,12 +107,13 @@ class PlusCourtChemin():
                 min = temps[v]
                 min_index = v
         return min_index
- 
+
     def dijkstra(self, sommet_depart, sommet_arrive):
         """Principale djikra"""
+        sommet_traite = [False] * self.nb_sommet
         temps = [1e7] * self.nb_sommet
         temps[sommet_depart] = 0
-        sommet_traite = [False] * self.nb_sommet
+        pere = {sommet_depart:None}  #Racine
         for _ in range(self.nb_sommet):  # Sommet duquel je pars
             index_mini_tps = self.mini_temps(temps, sommet_traite)
             sommet_traite[index_mini_tps] = True
@@ -122,7 +123,17 @@ class PlusCourtChemin():
                 tps_itineraire = tps_minimum + tps_depart_arrive
                 if (tps_depart_arrive > 0) and (sommet_traite[v] == False) and (temps[v] > tps_itineraire):
                     temps[v] = tps_itineraire
-        print("Pour aller de {} à {} il faut {} sec".format(sommet_depart, sommet_arrive, temps[sommet_arrive]))
+                    pere[v] = index_mini_tps
+        self.mes_itineraire(pere, sommet_depart, sommet_arrive)
+
+    def mes_itineraire(self, dico, sommet_depart, sommet_arrive):
+        """Pars de l'arrive pour remontrer progressivement au sommet de départ"""
+        itineraire = []
+        while dico[sommet_arrive] != None: # Racine
+            itineraire.append(sommet_arrive)
+            sommet_arrive = dico[sommet_arrive]
+        itineraire.append(sommet_depart)
+        print(itineraire[::-1]) # Je suis parti de l'arrivé donc forcément...
 
 # Driver program
  
@@ -130,7 +141,7 @@ class PlusCourtChemin():
 
 #Main pour tester les fonctions
 if __name__ == "__main__":
-    file = "metro.txt"
+    file = "test_fichier.txt"
     V = file_parser(file,"stations")
     E = file_parser(file,"liens")
     nb_sommet = len(V)
@@ -138,4 +149,4 @@ if __name__ == "__main__":
     fill_matrice(matrice,E)
     #est_connexe(matrice)
     #print(destinations_possibles(171))
-    PlusCourtChemin(matrice, 0, 20)
+    PlusCourtChemin(matrice, 0, 3)
