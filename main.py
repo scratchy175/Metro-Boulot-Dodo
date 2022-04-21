@@ -45,13 +45,13 @@ def fill_matrice(matrice,liens):
         matrice[sommet_depart][sommet_arrive] = temps
         matrice[sommet_arrive][sommet_depart] = temps
 
+
 #Affichage de la matrice  (utile pour matrice petite sinon illisible)
 def affiche_matrice(matrice):
     for liste in matrice:
         print(" ".join([str(nombre) for nombre in liste]))
 
 #Vérification si la matrice est connexe
-
 def est_connexe(matrice):
     """Pars du sommet 0 et lance un parcours en prof pour donner l'ensemble des
     sommets connectés à 0, et affirme ou réfute la connexité du graphe"""
