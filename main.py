@@ -14,8 +14,7 @@ def file_parser(file, arg):
     for ligne in lecture:
         premiere_lettre = ligne[0]
         if premiere_lettre == 'V':
-            info_station = ligne.split(" ",5)
-            print(info_station)
+            pass
         elif premiere_lettre == 'E':
             liens.append(ligne.split(" "))
     if arg == "stations":
@@ -38,7 +37,7 @@ def fill_matrice(matrice,liens):
     for ligne in liens:
         sommet_depart = int(ligne[1])
         sommet_arrive = int(ligne[2])
-        temps = int(ligne[-1])
+        temps = int(ligne[3])
         matrice[sommet_depart][sommet_arrive] = temps
         matrice[sommet_arrive][sommet_depart] = temps
 
@@ -132,6 +131,7 @@ if __name__ == "__main__":
     nb_sommet = len(V)
     matrice = generer_matrice(nb_sommet)
     fill_matrice(matrice,E)
+    affiche_matrice(matrice)
     #est_connexe(matrice)
     #est_connexe(matrice)
-    #g = PlusCourtChemin(matrice, 0, 3)
+    g = PlusCourtChemin(matrice, 0, 3)
