@@ -1,5 +1,8 @@
 #Parsing du fichier pour isoler les stations et les liens et obtenir deux listes propres
 
+from re import I
+
+
 def lecture_fichier(file):
     """Lis le fichier dont le chemin a été mis en paramètre"""
     with open(file, "r") as fic:
@@ -136,6 +139,44 @@ def mes_itineraire(dico, sommet_depart, sommet_arrive):
     itineraire.append(sommet_depart)  # Je rajoute la racine
     return itineraire[::-1] # Je suis parti de l'arrivé donc forcément...
 
+###############################################################################
+# Consigne de voyages
+###############################################################################
+
+def direction(sommet_dep=252, sommet_arr=166):
+    """Détermine la direction dans laquelle il faut aller"""
+    terminus_1 = int(V[sommet_dep][3]) # On a besoin que d'un terminus_1
+    terminus_2 = int(V[sommet_dep][4])
+    delta_T1 = dijkstra(matrice, sommet_dep, terminus_1)[1]
+    delta_T2 = dijkstra(matrice, sommet_arr, terminus_1)[1]
+    ligne = V[sommet_dep][2]
+    if delta_T1 > delta_T2:
+        return print("direction {}".format(terminus_1))
+    else:
+        return print("direction {}".format(terminus_2))
+
+
+def consigne(dep, arrive):
+    """Prend en paramètre l'itineraire et le simplifie
+    pour donner les consignes sous le formet demande"""
+    itineraire, tps = dijkstra(matrice, dep, arrive)
+    depart = itineraire[0]
+    destination = itineraire[-1]
+    ligne_traite = []
+    tps = tps/60
+    print("Vous etes à", depart)
+    for i in range(len(itineraire)-1):
+        ligne_de_arret1 = V[itineraire[i]][2]
+        ligne_de_arret2 = V[itineraire[i+1]][2]
+        if ligne_de_arret1 != ligne_de_arret2:
+            print("A {}, changez et prenez la ligne {} ".format(itineraire[i], ligne_de_arret2), end="")
+        else:
+            if ligne_de_arret1 not in ligne_traite:
+                direction(itineraire[i], itineraire[i+1])
+                ligne_traite.append(ligne_de_arret1)
+    print("Vous devriez arriver à {} dans {} minutes".format(destination, tps))
+
+
 
 #Main pour tester les fonctions
 if __name__ == "__main__":
@@ -146,5 +187,5 @@ if __name__ == "__main__":
     matrice = generer_matrice(nb_sommet)
     fill_matrice(matrice,E)
     #est_connexe(matrice)
-    #print(destinations_possibles(92))
-    print(dijkstra(matrice, 52, 198))
+    #print(destinations_possibles(67))
+    consigne(8, 275)
