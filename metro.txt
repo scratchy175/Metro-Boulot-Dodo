@@ -11,12 +11,12 @@ V 0006 01 130 66 Argentine
 V 0007 11 68 183 Arts et Métiers
 V 0008 03 251 114 Arts et Métiers
 V 0009 12 276 178 Assemblée Nationale
-V 0010 07 152 179 163 Aubervilliers-Pantin, Quatre Chemins
+V 0010 07 152 179 363 Aubervilliers-Pantin, Quatre Chemins
 V 0011 10 37 117 Avenue Émile Zola
 V 0012 02 256 213 Avron
 V 0013 02 256 213 Barbès Rochechouart
 V 0014 04 268 262 Barbès Rochechouart
-V 0015 13 72 319 Basilique de Saint-Denis
+V 0015 13 72 319 112 Basilique de Saint-Denis
 V 0016 01 130 66 Bastille
 V 0017 05 28 242 Bastille
 V 0018 08 240 89 Bastille
@@ -45,12 +45,12 @@ V 0040 05 28 242 Bréguet-Sabin
 V 0041 7b 170 280 Buttes Chaumont
 V 0042 09 253 181 Buzenval
 V 0043 01 130 66 Bérault
-V 0044 07 152 179 163 Cadet
+V 0044 07 152 179 363 Cadet
 V 0045 06 57 214 Cambronne
 V 0046 05 28 242 Campo-Formio
 V 0047 10 37 117 Cardinal Lemoine
-V 0048 13 72 319 Carrefour Pleyel
-V 0049 07 152 179 163 Censier Daubenton
+V 0048 13 72 319 112 Carrefour Pleyel
+V 0049 07 152 179 363 Censier Daubenton
 V 0050 01 130 66 Champs Élysées, Clémenceau
 V 0051 13 72 112 319 Champs Élysées, Clémenceau
 V 0052 10 37 117 Chardon Lagâche
@@ -60,11 +60,11 @@ V 0055 01 130 66 Charles de Gaulle, Étoile
 V 0056 02 256 213 Charles de Gaulle, Étoile
 V 0057 06 57 214 Charles de Gaulle, Étoile
 V 0058 09 253 181 Charonne
-V 0059 07 152 179 163 Chaussée d'Antin, La Fayette
+V 0059 07 152 179 363 Chaussée d'Antin, La Fayette
 V 0060 09 253 181 Chaussée d'Antin, La Fayette
 V 0061 08 240 89 Chemin Vert
 V 0062 06 57 214 Chevaleret
-V 0063 07 152 179 163 Château Landon
+V 0063 07 152 179 363 Château Landon
 V 0064 04 268 262 Château Rouge
 V 0065 04 268 262 Château d'Eau
 V 0066 01 130 66 Château de Vincennes
@@ -72,7 +72,7 @@ V 0067 01 130 66 Châtelet
 V 0068 11 68 183 Châtelet
 V 0069 14 176 24 Châtelet
 V 0070 04 268 262 Châtelet
-V 0071 07 152 179 163 Châtelet
+V 0071 07 152 179 363 Châtelet
 V 0072 13 72 112 319 Châtillon-Montrouge
 V 0073 04 268 262 Cité
 V 0074 10 37 117 Cluny, La Sorbonne
@@ -83,12 +83,12 @@ V 0078 12 276 178 Concorde
 V 0079 08 240 89 Concorde
 V 0080 12 276 178 Convention
 V 0081 12 276 178 Corentin Celton
-V 0082 07 152 179 163 Corentin-Cariou
+V 0082 07 152 179 363 Corentin-Cariou
 V 0083 06 57 214 Corvisart
 V 0084 14 176 24 Cour Saint-Émilion
 V 0085 02 256 213 Courcelles
 V 0086 02 256 213 Couronnes
-V 0087 07 152 179 163 Crimée
+V 0087 07 152 179 363 Crimée
 V 0088 09 253 181 Croix de Chavaux
 V 0089 08 240 89 Créteil-Préfecture
 V 0090 08 240 89 Créteil-Université
@@ -109,7 +109,7 @@ V 0104 09 253 181 Exelmans
 V 0105 08 240 89 Faidherbe-Chaligny
 V 0106 12 276 178 Falguière
 V 0107 08 240 89 Filles du Calvaire
-V 0108 07 152 179 163 Fort d'Aubervilliers
+V 0108 07 152 179 363 Fort d'Aubervilliers
 V 0109 01 130 66 Franklin D. Roosevelt
 V 0110 09 253 181 Franklin D. Roosevelt
 V 0111 08 240 89 Félix Faure
@@ -124,15 +124,15 @@ V 0119 01 130 66 Gare de Lyon
 V 0120 14 176 24 Gare de Lyon
 V 0121 04 268 262 Gare de l'Est
 V 0122 05 28 242 Gare de l'Est
-V 0123 07 152 179 163 Gare de l'Est
+V 0123 07 152 179 363 Gare de l'Est
 V 0124 04 268 262 Gare du Nord
 V 0125 05 28 242 Gare du Nord
-V 0126 13 72 319 Garibaldi
+V 0126 13 72 319 112 Garibaldi
 V 0127 01 130 66 George V
 V 0128 06 57 214 Glacière
 V 0129 11 68 183 Goncourt
 V 0130 01 130 66 Grande Arche de la Défense
-V 0131 13 72 319 Guy Môquet
+V 0131 13 72 319 112 Guy Môquet
 V 0132 03 251 114 Havre Caumartin
 V 0133 09 253 181 Havre Caumartin
 V 0134 05 28 242 Hoche
@@ -150,10 +150,10 @@ V 0145 10 37 117 Javel
 V 0146 11 68 183 Jourdain
 V 0147 12 276 178 Jules Joffrin
 V 0148 10 37 117 Jussieu
-V 0149 07 152 179 163 Jussieu
+V 0149 07 152 179 363 Jussieu
 V 0150 06 57 214 Kléber
 V 0151 02 256 213 La Chapelle
-V 0152 07 152 179 163 La Courneuve, 8 Mai 1945
+V 0152 07 152 179 363 La Courneuve, 8 Mai 1945
 V 0153 13 72 112 319 La Fourche
 V 0154 10 37 117 La Motte Picquet, Grenelle
 V 0155 06 57 214 La Motte Picquet, Grenelle
@@ -163,14 +163,14 @@ V 0158 08 240 89 La Tour-Maubourg
 V 0159 12 276 178 Lamarck Caulaincourt
 V 0160 05 28 242 Laumière
 V 0161 07 152 363 Le Kremlin-Bicêtre
-V 0162 07 152 179 163 Le Peletier
+V 0162 07 152 179 363 Le Peletier
 V 0163 08 240 89 Ledru Rollin
-V 0164 07 152 179 163 Les Gobelins
+V 0164 07 152 179 363 Les Gobelins
 V 0165 04 268 262 Les Halles
 V 0166 01 130 66 Les Sablons
 V 0167 08 240 89 Liberté
 V 0168 13 72 112 319 Liège
-V 0169 07 152 179 163 Louis Blanc
+V 0169 07 152 179 363 Louis Blanc
 V 0170 7b 170 280 Louis Blanc
 V 0171 03 251 114 Louise Michel
 V 0172 08 240 89 Lourmel
@@ -183,9 +183,9 @@ V 0178 12 276 178 Mairie d'Issy
 V 0179 07 152 179 Mairie d'Ivry
 V 0180 13 72 112 Mairie de Clichy
 V 0181 09 253 181 Mairie de Montreuil
-V 0182 13 72 319 Mairie de Saint-Ouen
+V 0182 13 72 319 112 Mairie de Saint-Ouen
 V 0183 11 68 183 Mairie des Lilas
-V 0184 07 152 179 163 Maison Blanche
+V 0184 07 152 179 363 Maison Blanche
 V 0185 08 240 89 Maisons-Alfort les Juilliottes
 V 0186 08 240 89 Maisons-Alfort, Stade
 V 0187 13 72 112 319 Malakoff-Plateau de Vanves
@@ -225,11 +225,11 @@ V 0220 09 253 181 Oberkampf
 V 0221 10 37 117 Odéon
 V 0222 04 268 262 Odéon
 V 0223 03 251 114 Opéra
-V 0224 07 152 179 163 Opéra
+V 0224 07 152 179 363 Opéra
 V 0225 08 240 89 Opéra
 V 0226 05 28 242 Ourcq
 V 0227 01 130 66 Palais Royal, Musée du Louvre
-V 0228 07 152 179 163 Palais Royal, Musée du Louvre
+V 0228 07 152 179 363 Palais Royal, Musée du Louvre
 V 0229 03 251 114 Parmentier
 V 0230 06 57 214 Passy
 V 0231 12 276 178 Pasteur
@@ -242,21 +242,21 @@ V 0237 07 152 179 Pierre Curie
 V 0238 12 276 178 Pigalle
 V 0239 02 256 213 Pigalle
 V 0240 08 240 89 Place Balard
-V 0241 07 152 179 163 Place Monge
+V 0241 07 152 179 363 Place Monge
 V 0242 05 28 242 Place d'Italie
 V 0243 06 57 214 Place d'Italie
-V 0244 07 152 179 163 Place d'Italie
+V 0244 07 152 179 363 Place d'Italie
 V 0245 13 72 112 319 Place de Clichy
 V 0246 02 256 213 Place de Clichy
 V 0247 11 68 183 Place des Fêtes
 V 0248 7b 170 280 Place des Fêtes
 V 0249 13 72 112 319 Plaisance
-V 0250 07 152 179 163 Poissonnière
+V 0250 07 152 179 363 Poissonnière
 V 0251 03 251 114 Pont de Levallois, Bécon
 V 0252 01 130 66 Pont de Neuilly
 V 0253 09 253 181 Pont de Sèvres
-V 0254 07 152 179 163 Pont-Marie
-V 0255 07 152 179 163 Pont-Neuf
+V 0254 07 152 179 363 Pont-Marie
+V 0255 07 152 179 363 Pont-Neuf
 V 0256 02 256 213 Porte Dauphine
 V 0257 08 240 89 Porte Dorée
 V 0258 01 130 66 Porte Maillot
@@ -273,17 +273,17 @@ V 0268 04 268 262 Porte de Clignancourt
 V 0269 09 253 181 Porte de Montreuil
 V 0270 05 28 242 Porte de Pantin
 V 0271 09 253 181 Porte de Saint-Cloud
-V 0272 13 72 319 Porte de Saint-Ouen
+V 0272 13 72 319 112 Porte de Saint-Ouen
 V 0273 13 72 112 319 Porte de Vanves
 V 0274 12 276 178 Porte de Versailles
 V 0275 01 130 66 Porte de Vincennes
 V 0276 12 276 178 Porte de la Chapelle
-V 0277 07 152 179 163 Porte de la Villette
+V 0277 07 152 179 363 Porte de la Villette
 V 0278 11 68 183 Porte des Lilas
 V 0279 3b 279 116 Porte des Lilas
 V 0280 7b 170 280 Pré-Saint-Gervais
 V 0281 14 176 24 Pyramides
-V 0282 07 152 179 163 Pyramides
+V 0282 07 152 179 363 Pyramides
 V 0283 11 68 183 Pyrénées
 V 0284 02 256 213 Père Lachaise
 V 0285 03 251 114 Père Lachaise
@@ -301,7 +301,7 @@ V 0296 08 240 89 Reuilly Diderot
 V 0297 05 28 242 Richard Lenoir
 V 0298 08 240 89 Richelieu Drouot
 V 0299 09 253 181 Richelieu Drouot
-V 0300 07 152 179 163 Riquet
+V 0300 07 152 179 363 Riquet
 V 0301 09 253 181 Robespierre
 V 0302 02 256 213 Rome
 V 0303 08 240 89 Rue Montmartre, Grands Boulevards
@@ -319,8 +319,8 @@ V 0314 08 240 89 République
 V 0315 09 253 181 République
 V 0316 09 253 181 Saint-Ambroise
 V 0317 09 253 181 Saint-Augustin
-V 0318 13 72 319 Saint-Denis-Porte de Paris
-V 0319 13 72 319 Saint-Denis-Université
+V 0318 13 72 319 112 Saint-Denis-Porte de Paris
+V 0319 13 72 319 112 Saint-Denis-Université
 V 0320 3b 279 116 Saint-Fargeau
 V 0321 13 72 112 319 Saint-Francois Xavier
 V 0322 12 276 178 Saint-Georges
@@ -342,18 +342,18 @@ V 0337 04 268 262 Simplon
 V 0338 12 276 178 Solférino
 V 0339 02 256 213 Stalingrad
 V 0340 05 28 242 Stalingrad
-V 0341 07 152 179 163 Stalingrad
+V 0341 07 152 179 363 Stalingrad
 V 0342 04 268 262 Strasbourg Saint-Denis
 V 0343 08 240 89 Strasbourg Saint-Denis
 V 0344 09 253 181 Strasbourg Saint-Denis
-V 0345 07 152 179 163 Sully Morland
+V 0345 07 152 179 363 Sully Morland
 V 0346 10 37 117 Sèvres Babylone
 V 0347 12 276 178 Sèvres Babylone
 V 0348 06 57 214 Sèvres Lecourbe
 V 0349 10 37 117 Ségur
 V 0350 03 251 114 Temple
 V 0351 02 256 213 Ternes
-V 0352 07 152 179 163 Tolbiac
+V 0352 07 152 179 363 Tolbiac
 V 0353 12 276 178 Trinité d'Estienne d'Orves
 V 0354 06 57 214 Trocadéro
 V 0355 09 253 181 Trocadéro
