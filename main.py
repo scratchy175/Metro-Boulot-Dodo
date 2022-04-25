@@ -1,4 +1,7 @@
+
 #Parsing du fichier pour isoler les stations et les liens et obtenir deux listes propres
+from xml.sax.saxutils import prepare_input_source
+
 
 def lecture_fichier(file):
     """Lis le fichier dont le chemin a été mis en paramètre"""
@@ -137,6 +140,87 @@ def mes_itineraire(dico, sommet_depart, sommet_arrive):
     return itineraire[::-1] # Je suis parti de l'arrivé donc forcément...
 
 
+###############################################################################
+#Partie que j'ai fait
+###############################################################################
+
+
+#fonction qui renvoie un dico contenant les terminus et leurs poids d'un sommet (mini dijktra)
+def poids(matrice,stations,start):
+    terminus_ligne = [int(stations[start][3]),int(stations[start][4])]
+    ligne_metro = stations[start][2]
+    nontraiter = [val for val in range(len(stations)) if stations[val][2] == ligne_metro and val != start]
+    traiter = [start]
+    dico={start:0}
+    n = 0
+    while len(nontraiter)+1 != len(traiter):
+        for j in nontraiter:
+            poid = matrice[traiter[n]][j]
+            if poid != 0 and j not in traiter:
+                dico[j] = dico[traiter[n]] + poid
+                traiter.append(j)
+        if traiter[n] not in terminus_ligne:
+            dico.pop(traiter[n])
+        n += 1
+    #print(dico)
+    return dico
+
+def affichage(stations,trajet,temps):
+    #affichage du depart
+    print("Vous êtes à {}.".format(stations[trajet[0]][5]))
+
+    #création de la liste contenant le premier sommet, le dernier et les sommet ou il y a un changement
+    sommet = trajet[0]
+    liste_changements = [trajet[0]]
+    for j in range(len(trajet)):
+        if stations[sommet][2] != stations[trajet[j]][2]:
+            liste_changements.append(trajet[j-1])
+            liste_changements.append(trajet[j])
+        sommet = trajet[j]
+    liste_changements.append(trajet[j])
+    ##print(liste_changements)
+
+
+    #affichage entre le premier sommet et le premier changement ou le dernier sommet si il n'y a pas de changement
+    p1=poids(matrice,stations,liste_changements[0]) #poids du premier sommet et ses terminus
+    p2=poids(matrice,stations,liste_changements[1]) #poids du dernier sommet ou du premier changement et ses terminus
+    #on obtiens un dico avec les terminus et leur poids
+    ##print(p1,p2)
+    key1 = list(p1.keys()) #pour recuperer les cles du dico
+    if stations[liste_changements[0]][2] == '13' or stations[liste_changements[0]][2] == '07': #petit check si ligne 13 ou 7
+        if p1[key1[0]] < p2[key1[0]]:  #comparaison des poids
+            print('Prenez la ligne {} direction {}'.format(stations[liste_changements[0]][2],stations[key1[1]][6]))
+        else:
+            print('Prenez la ligne {} direction {}'.format(stations[liste_changements[0]][2],stations[key1[0]][6]))
+    else:
+        if p1[key1[0]] < p2[key1[0]]:
+            print('Prenez la ligne {} direction {}'.format(stations[liste_changements[0]][2],stations[key1[1]][5]))
+        else:
+            print('Prenez la ligne {} direction {}'.format(stations[liste_changements[0]][2],stations[key1[0]][5]))
+
+    #affichage entre les changements intermediaires et la fin du trajet
+    if len(liste_changements) > 2: # si il y a plus de 2 changements
+        for i in range(2,len(liste_changements),2):
+            p1=poids(matrice,stations,liste_changements[i])
+            p2=poids(matrice,stations,liste_changements[i+1])
+            ##print(p1,p2)
+            key1 = list(p1.keys())
+            if stations[liste_changements[i]][2] == '13' or stations[liste_changements[i]][2] == '07':
+                if p1[key1[0]] < p2[key1[0]]:
+                    print('A {}, changez et prenez la ligne {} direction {}'.format(stations[liste_changements[i]][6],stations[liste_changements[i]][2],stations[key1[1]][6]))
+                else:
+                    print('A {}, changez et prenez la ligne {} direction {}'.format(stations[liste_changements[i]][6],stations[liste_changements[i]][2],stations[key1[0]][6]))
+            else:
+                if p1[key1[0]] < p2[key1[0]]:
+                    print('A {}, changez et prenez la ligne {} direction {}'.format(stations[liste_changements[i]][5],stations[liste_changements[i]][2],stations[key1[1]][5]))
+                else:
+                    print('A {}, changez et prenez la ligne {} direction {}'.format(stations[liste_changements[i]][5],stations[liste_changements[i]][2],stations[key1[0]][5]))
+
+    #affichage de l'arrivee
+    print("Vous devriez arriver a {} dans {} minutes.".format(stations[trajet[j]][5],temps//60))
+
+
+
 #Main pour tester les fonctions
 if __name__ == "__main__":
     file = "metro.txt"
@@ -147,4 +231,19 @@ if __name__ == "__main__":
     fill_matrice(matrice,E)
     #est_connexe(matrice)
     #print(destinations_possibles(92))
-    print(dijkstra(matrice, 52, 198))
+    #print(dijkstra(matrice, 0, 5)) 
+
+    print("matrice",matrice[7].index(39))
+    #trajet,temps = dijkstra(matrice, 0, 150)
+    #trajet,temps = dijkstra(matrice, 150, 0)
+    #trajet,temps = dijkstra(matrice, 1, 5)
+    #trajet,temps = dijkstra(matrice, 5, 1)
+    trajet,temps = dijkstra(matrice, 0, 39)
+    print(trajet)
+    print(temps)
+    
+    affichage(V,trajet,temps)
+
+
+    
+    
